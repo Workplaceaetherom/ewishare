@@ -1,0 +1,31 @@
+
+:root{--accent:#00ff88;--glass:rgba(255,255,255,0.08);--border:rgba(255,255,255,0.15);--bg:#0a0a0a;--text:#fff}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,sans-serif}
+body{background:var(--bg);color:var(--text);overflow-x:hidden;position:relative}
+.bg-blur{position:fixed;inset:0;background:radial-gradient(600px at 20% 20%, rgba(0,255,136,0.15), transparent), radial-gradient(800px at 80% 80%, rgba(0,136,255,0.12), transparent);z-index:-1;filter:blur(20px)}
+.glass-header{display:flex;justify-content:space-between;align-items:center;padding:16px 32px;background:var(--glass);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px} .logo small{opacity:0.6;font-size:12px}
+.hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;padding:48px 32px;align-items:center}
+.hero-glass{background:var(--glass);backdrop-filter:blur(24px);border:1px solid var(--border);border-radius:24px;padding:32px;box-shadow:0 8px 32px rgba(0,0,0,0.4)}
+.hero-glass h1{font-size:42px;line-height:1.1;margin-bottom:16px} .accent{color:var(--accent)}
+.cta-row{display:flex;gap:12px;margin:20px 0}
+.btn-primary{background:var(--accent);color:#000;border:0;padding:14px 24px;border-radius:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;transition:0.2s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,255,136,0.3)}
+.btn-glass{background:var(--glass);border:1px solid var(--border);color:#fff;padding:14px 24px;border-radius:14px;cursor:pointer;backdrop-filter:blur(12px)}
+.hero-image img{width:100%;border-radius:24px;border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 32px 32px}
+.glass-card{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:20px;padding:24px;transition:0.3s}
+.glass-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.install-hub{padding:32px;background:linear-gradient(180deg, transparent, rgba(0,255,136,0.05));border-top:1px solid var(--border)}
+.install-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0}
+.install-card{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:18px;padding:20px;text-align:center}
+.badge{background:rgba(0,255,136,0.15);color:var(--accent);padding:4px 8px;border-radius:20px;font-size:11px;display:inline-block;margin:8px 0}
+.dl{display:block;margin-top:8px;color:var(--accent);font-size:13px}
+.flow{background:var(--glass);border:1px solid var(--border);border-radius:16px;padding:20px;margin:20px 0}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);z-index:100;align-items:center;justify-content:center}
+.modal-glass{background:rgba(30,30,30,0.9);backdrop-filter:blur(24px);border:1px solid var(--border);border-radius:20px;padding:24px;max-width:600px;width:90%}
+.close{float:right;cursor:pointer;font-size:24px}
+.glass-footer{text-align:center;padding:32px;background:var(--glass);border-top:1px solid var(--border);margin-top:40px}
+.ad-slot{border:1px dashed #444;padding:12px;border-radius:12px;margin:16px auto;max-width:600px;color:#888}
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:rgba(20,20,20,0.95);backdrop-filter:blur(20px);border-top:1px solid var(--border);padding:16px;text-align:center;z-index:200}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.install-grid{grid-template-columns:1fr 1fr}}
