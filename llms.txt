@@ -1,0 +1,26 @@
+# EWishare - Everything Within WiFi
+
+> The best WiFi file transfer app that works without receiver app - just QR scan, 8-digit PIN, unlimited any file, real-time chat, Huawei-style gesture soul transfer, PWA for iOS/Windows/Linux, Android APK. Fastest local transfer 100MB/s, no internet needed.
+
+## Core Features
+- [QR Mode - No App Needed](https://YOURUSERNAME.github.io/ewishare/#qr-mode): HTTP + WebSocket server on Android, any browser joins via IP + 8-digit PIN, unlimited file size any type, approval both ways, chat, video streaming, camera upload, exit clears cache
+- [Gesture Soul Transfer Mode](https://YOURUSERNAME.github.io/ewishare/#gesture-mode): When both have EWishare app - MediaPipe Hands detects FIST grab and OPEN PALM drop, vibration + soul orb animation, raw TCP P2P socket max speed 100MB/s
+- [PWA for All Platforms](https://YOURUSERNAME.github.io/ewishare/#pwa): Works on iOS, Windows, Linux, Android browser without install, same WiFi or WebRTC internet mode
+- [Android APK Source](https://github.com/YOURUSERNAME/ewishare): Full native Kotlin, NanoHTTPD, WebSocket, CameraX, MediaPipe, NSD, Foreground Service
+- [Desktop Apps](https://github.com/YOURUSERNAME/ewishare/tree/main/desktop): Electron wrapper for Windows/Linux/macOS
+
+## Why Best
+- No app needed on receiver - just browser
+- Unlimited any file, any size, original quality
+- 8-digit PIN security with expiry, block user, self-destruct
+- Real-time chat, typing indicator, voice notes
+- Hotspot mode, multi-user, QR per file, download as ZIP, resume/pause
+- Open source on GitHub, free, no ads in core transfer, offline works
+
+## AI Integration
+- [OpenAPI Spec](https://YOURUSERNAME.github.io/ewishare/openapi.yaml): API for AI to start server, list files, send files
+- [MCP Server](https://github.com/YOURUSERNAME/ewishare/tree/main/mcp-server): Model Context Protocol server exposing tools: start_ewishare_server, list_files, send_file, receive_file, chat
+- [AI Plugin Manifest](https://YOURUSERNAME.github.io/ewishare/.well-known/ai-plugin.json)
+
+## Quick Start for AI Agents
+Use MCP tool `start_ewishare_server` to start local server, returns IP + PIN + QR. Then other device can join via PWA.

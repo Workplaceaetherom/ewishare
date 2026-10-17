@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  title: EWishare - Everything Within WiFi API
+  description: Best WiFi file transfer API - no app needed on receiver, QR + 8-digit PIN, unlimited any file, chat, gesture soul transfer. Use for AI agents to transfer files over local WiFi.
+  version: 1.0.0
+servers:
+  - url: https://YOURUSERNAME.github.io/ewishare
+paths:
+  /api/start-server:
+    post:
+      summary: Start EWishare local server
+      description: Starts HTTP + WebSocket server on Android, returns IP, mDNS, 8-digit PIN, QR. Other device can join via browser PWA without app.
+      operationId: startServer
+      responses:
+        '200':
+          description: Server started
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ip: { type: string, example: "192.168.1.5:8080" }
+                  mdns: { type: string, example: "ewishare.local:8080" }
+                  pin: { type: string, example: "48291739" }
+                  qr: { type: string }
+  /api/list-files:
+    get:
+      summary: List shared files
+      parameters:
+        - name: pin
+          in: query
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: List of files with preview support }
+  /api/send-file:
+    post:
+      summary: Request to send file (needs host approval)
+      responses:
+        '200': { description: Waiting for approval }

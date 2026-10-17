@@ -1,0 +1,2 @@
+# Full docs for AI - EWishare
+Full documentation in README.md and docs/

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EWishare - Everything Within WiFi | Best WiFi File Transfer Without App</title>
+<meta name="description" content="EWishare = Everything Within WiFi. Best WiFi file transfer - no app needed on receiver! QR + 8-digit PIN, unlimited any file, chat, gesture soul transfer. Android APK, iOS, Windows, Linux. 100MB/s offline, open source, UK GDPR compliant.">
+<meta name="keywords" content="wifi file transfer, qr file transfer, unlimited file share, airdrop alternative, shareit alternative, pwa file transfer, soul transfer gesture">
+<meta name="theme-color" content="#00ff88">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/qr.svg">
+<link rel="stylesheet" href="css/style.css">
+<meta property="og:title" content="EWishare - Everything Within WiFi">
+<meta property="og:description" content="No app needed on receiver! QR + 8-digit PIN, unlimited, soul transfer gesture.">
+<meta property="og:image" content="screenshots/screenshot-1.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"EWishare - Everything Within WiFi","operatingSystem":"Android, iOS, Windows, Linux, macOS","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"featureList":["No app needed","QR + 8-digit PIN","Unlimited","Soul Transfer Gesture","100MB/s"],"applicationCategory":"FileTransfer"}
+</script>
+</head>
+<body>
+<div class="bg-blur"></div>
+
+<header class="glass-header">
+  <div class="logo"><img src="icons/soul.svg" width="32"><span>EWishare</span><small>EWI = Everything Within WiFi</small></div>
+  <nav><a href="#features">Features</a><a href="#install">Install</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+</header>
+
+<section class="hero">
+  <div class="hero-glass">
+    <h1>Everything Within WiFi.<br><span class="accent">No App Needed on Other Side.</span></h1>
+    <p>One link to install on Android, iOS, Windows, Linux. QR scan + 8-digit PIN. Unlimited any file, original quality. Soul-transfer gesture: FIST grab into orb + vibration, OPEN PALM drop. 100MB/s offline.</p>
+    <div class="cta-row">
+      <button class="btn-primary" onclick="document.getElementById('install').scrollIntoView({behavior:'smooth'})"><img src="icons/install.svg" width="18"> Install for All Platforms</button>
+      <button class="btn-glass" onclick="openModal('qr-modal')">See QR Mode Demo</button>
+    </div>
+    <div class="trust">UK GDPR Compliant • Open Source • No Cloud Storage • End-to-End on WiFi</div>
+  </div>
+  <div class="hero-image"><img src="screenshots/screenshot-4.webp" alt="Soul Transfer"></div>
+</section>
+
+<section id="features" class="grid">
+  <div class="glass-card"><img src="icons/qr.svg" width="36"><h3>QR Mode - No App Needed</h3><p>Android APK hosts HTTP + WebSocket on <code>192.168.1.5:8080</code> + <code>ewishare.local:8080</code>. Other device scans QR, enters 8-digit PIN in browser. Gets chat, approval flow, video streaming, camera upload, exit clears cache. Works even if friend has NOTHING.</p></div>
+  <div class="glass-card"><img src="icons/soul.svg" width="36"><h3>Soul Transfer Gesture</h3><p>When both have native app: Front camera MediaPipe Hands detects FIST = grab file into glowing golden orb + 200ms vibration + particle trail. OPEN PALM = drop on other phone + triple pulse. Raw TCP P2P 100MB/s unlimited. Taking soul from one body to other.</p></div>
+  <div class="glass-card"><img src="icons/shield.svg" width="36"><h3>100% Native vs PWA</h3><p><b>Native (APK/EXE/AppImage):</b> Can HOST, max speed, background, hotspot, mDNS, gesture 100%. <b>PWA/Browser:</b> Can only JOIN as guest, 85-90% features, no host, WebRTC ~30-50MB/s. At least one native needed for offline fast transfer.</p></div>
+</section>
+
+<section id="install" class="install-hub">
+  <h2>One PWA Link = Install on All Platforms</h2>
+  <p class="sub">Open <code>https://YOURNAME.github.io/ewishare/</code> on any device and install. Plus download proper native for 100% power.</p>
+  
+  <div class="install-grid">
+    <div class="install-card" onclick="installPWA('android')"><img src="icons/install.svg" width="32"><h4>Android</h4><p>Chrome → Install popup → APK-like app</p><span class="badge">PWA 90% + Native 100%</span><button>Install PWA</button><a href="../app/build/outputs/apk/debug/app-debug.apk" class="dl">Download APK (100%)</a></div>
+    <div class="install-card"><img src="icons/install.svg" width="32"><h4>iOS</h4><p>Safari → Share → Add to Home Screen</p><span class="badge">PWA 90%</span><button>Add to Home Screen</button><small>Native IPA needs Mac + Apple Dev $99/yr</small></div>
+    <div class="install-card"><img src="icons/install.svg" width="32"><h4>Windows</h4><p>Edge/Chrome → Install icon in address bar</p><span class="badge">PWA 90% + Native 100%</span><button>Install PWA</button><a href="../desktop/dist/EWishare-Setup.exe" class="dl">Download EXE (100%)</a></div>
+    <div class="install-card"><img src="icons/install.svg" width="32"><h4>Linux</h4><p>Chrome → Install → .desktop app</p><span class="badge">PWA 90% + Native 100%</span><button>Install PWA</button><a href="../desktop/dist/EWishare.AppImage" class="dl">Download AppImage (100%)</a></div>
+  </div>
+
+  <div class="flow">
+    <h3>Can Native + PWA send? YES. Can Native + Nothing send? YES.</h3>
+    <ul>
+      <li><b>Native Host + PWA Guest:</b> YES - Host starts server, PWA joins via IP+PIN - unlimited, chat, approval works</li>
+      <li><b>Native Host + Browser with NOTHING:</b> YES - Friend just scans QR, opens http://192.168.1.5:8080?pin=... - no install at all - most viral</li>
+      <li><b>Native + Native:</b> YES 100% - Soul gesture + 100MB/s raw TCP</li>
+      <li><b>PWA + PWA only (no native anywhere):</b> Needs internet - WebRTC room via 8-digit PIN, not pure offline</li>
+    </ul>
+  </div>
+</section>
+
+<div id="qr-modal" class="modal"><div class="modal-glass"><span class="close" onclick="closeModal('qr-modal')">&times;</span><h3>QR Mode Demo</h3><img src="screenshots/screenshot-1.webp" style="width:100%;border-radius:12px"><p>Host shows QR + 8-digit PIN. Guest scans, enters PIN, sees files, chat, approval popup.</p></div></div>
+
+<footer class="glass-footer">
+  <div>© 2026 EWishare - UK Company - GDPR Compliant | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a> | <a href="../docs/CLIENT_REPORT.md">Client Report</a></div>
+  <div class="ad-slot">Ad placeholder - Future monetization - non-intrusive, never during transfer</div>
+</footer>
+
+<div id="cookie-banner" class="cookie-banner"><p>We use only essential cookies for PWA offline cache. No tracking. UK GDPR compliant. <button onclick="document.getElementById('cookie-banner').style.display='none'">Accept</button> <a href="privacy.html">Learn more</a></p></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
